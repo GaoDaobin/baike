@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button style="width: 100%; height: 100px; font-size: 40px;" onclick="tapFunc1('1111')">点击测试1</button>
+
+<button style="width: 100%; height: 100px; font-size: 40px;" onclick="tapFunc2('2222')">点击测试2</button>
+
+<button style="width: 100%; height: 100px; font-size: 40px;" onclick="tapFunc3('3333')">点击测试3</button>
+
+<button style="width: 100%; height: 100px; font-size: 40px;" onclick="tapFunc4('4444')">点击测试4</button>
+
+</body>
+
+
+
+
+<script>
+function tapFunc1(para) {
+    
+};
+
+function tapFunc2(para) {
+    
+};
+
+function tapFunc3(para) {
+    try {
+        window.webkit.messageHandlers.tapFunc3.postMessage(para);
+    } catch (e) {
+        alert(e);
+    }
+};
+
+function tapFunc4(para) {
+    try {
+        window.webkit.messageHandlers.tapFunc4.postMessage(para);
+    } catch (e) {
+        alert(e);
+    }
+};
+
+</script>
+
+</html>
